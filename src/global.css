@@ -1,0 +1,62 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url(../../../Fonts/Ubuntu/Ubuntu-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu;
+  }
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+Button {
+  
+  background-color: #80665d;
+  color: #804a37;
+  border: 0px solid #804a37;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+button:hover {
+  background-color: #bbbf4e;
+}
+
+button:hover > i {
+  color: #f2f2f2;
+}
+
+input,
+select {
+  padding: 0.25rem 0.5rem;
+  border: 2px solid #804a37;
+  
+}
+
