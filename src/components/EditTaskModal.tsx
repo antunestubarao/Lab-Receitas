@@ -52,13 +52,13 @@ export function EditTaskModal(props: EditTaskModalProps) {
             <FormControl isRequired>
               <FormLabel>Título da Receita</FormLabel>
               <Input
-                value={props.selectedTask.text}
+                placeholder={props.selectedTask.text}
                 onChange={(e) => setTaskName(e.target.value)}
                 
               />
             </FormControl>
             <FormLabel>Ingredientes</FormLabel>
-            <Input value={props.selectedTask.ting}></Input>
+            <Input placeholder={props.selectedTask.ting}></Input>
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={props.onClose}>
