@@ -57,12 +57,12 @@ function App() {
 // RETURN
 
   return (
-    <Center h="100vh" w="100vh">
+    <Center >
 
 {/* OUT BOX     */}
     <Box
       maxW="600px"
-      m="0 auto 300px"
+      m="100px 150px"
       bg="#FFDFD4"
       p="20px 30px"
       borderRadius={50}

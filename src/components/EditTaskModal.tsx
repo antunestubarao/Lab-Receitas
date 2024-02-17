@@ -25,6 +25,7 @@ interface EditTaskModalProps {
 
 export function EditTaskModal(props: EditTaskModalProps) {
   const [taskName, setTaskName] = useState("");
+  const [ingName, setIngName] = useState("");
 
   function handleEditTask() {
     const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
@@ -32,6 +33,9 @@ export function EditTaskModal(props: EditTaskModalProps) {
     const updatedTasks = tasks.map((task: Task) => {
       if (task.id === props.selectedTask.id) {
         task.text = taskName;
+      }
+      if (task.id === props.selectedTask.id) {
+        task.ting = ingName;
       }
       return task;
     });
@@ -58,7 +62,9 @@ export function EditTaskModal(props: EditTaskModalProps) {
               />
             </FormControl>
             <FormLabel>Ingredientes</FormLabel>
-            <Input placeholder={props.selectedTask.ting}></Input>
+            <Input placeholder={props.selectedTask.ting}
+            onChange={(e) => setIngName(e.target.value)}
+            />
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={props.onClose}>
