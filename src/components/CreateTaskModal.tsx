@@ -21,18 +21,22 @@ interface CreateTaksModalProps {
   onOpen: () => void;
   onClose: () => void;
   setTasks: (tasks: Task) => void;
+  
 }
 
 export function CreateTaksModal(props: CreateTaksModalProps) {
   const [taskName, setTaskName] = useState("");
+  const [ingName, setIngName] = useState("");
+  
 
   function handleCreateTask() {
     const storedTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
     const newTask = {
       id: Math.random().toString(36).substr(2, 9),
       text: taskName,
-      done: false,
-      lac: false,
+      ting: ingName,
+      done: true,
+      lac: true,
     };
 
     storedTasks.push(newTask);
@@ -41,6 +45,10 @@ export function CreateTaksModal(props: CreateTaksModalProps) {
     props.setTasks((tasks: Task[]) => [...tasks, newTask]);
     props.onClose();
   }
+
+  
+
+  
 
   return (
     <>
@@ -58,8 +66,9 @@ export function CreateTaksModal(props: CreateTaksModalProps) {
               />
             </FormControl>
             <FormLabel>Ingredientes</FormLabel>
-            <Input></Input>
+            <Input onChange={(e) => setIngName(e.target.value)}/>
           </ModalBody>
+          
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={props.onClose}>
               Fechar

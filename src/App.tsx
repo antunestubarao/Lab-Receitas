@@ -22,6 +22,7 @@ import "./global.css";
 export interface Task {
   id: string;
   text: string;
+  ting: string;
   done: boolean;
   lac: boolean;
 }

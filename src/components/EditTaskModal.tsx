@@ -46,18 +46,19 @@ export function EditTaskModal(props: EditTaskModalProps) {
       <Modal isOpen={props.isOpen} onClose={props.onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Inclua sua Receita mais Saborosa</ModalHeader>
+          <ModalHeader>Edite sua Receita mais Saborosa</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <FormControl isRequired>
               <FormLabel>Título da Receita</FormLabel>
               <Input
-                placeholder="Altere o Título da Receita"
+                value={props.selectedTask.text}
                 onChange={(e) => setTaskName(e.target.value)}
+                
               />
             </FormControl>
             <FormLabel>Ingredientes</FormLabel>
-            <Input placeholder="refaça os ingredientes"></Input>
+            <Input value={props.selectedTask.ting}></Input>
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={props.onClose}>
