@@ -92,7 +92,7 @@ function App() {
           <Box position="relative" padding="5">
             <Divider border="2px solid #804a37" />
             <AbsoluteCenter  bg='#FFDFD4' fontSize="xl" color="#804a37" padding="0.5rem">
-              Filtre suas Receitas Receitas
+              Filtre suas Receitas
             </AbsoluteCenter>
           </Box>
           <ButtonGroup variant="outline" spacing="6">
@@ -138,7 +138,7 @@ function App() {
         <Box position="relative" padding="5">
           <Divider border="2px solid #804a37" />
           <AbsoluteCenter bg='#FFDFD4' fontSize="xl" color="#804a37" padding="0.5rem">
-            Lista de Receitas Receitas
+            Lista de Receitas 
           </AbsoluteCenter>
         </Box>
 
